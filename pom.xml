@@ -14,49 +14,41 @@
 	<dependencies>
 		<!-- These are the cucumber dependencies -->
 		<dependency>
-			<groupId>info.cukes</groupId>
+			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
+			<version>7.11.0</version>
 		</dependency>
+
 
 		<!-- These are the cucumber-junit dependencies -->
 		<dependency>
-			<groupId>info.cukes</groupId>
+			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
+			<version>7.11.0</version>
+			<scope>test</scope>
 		</dependency>
+
 
 		<!-- These are the junit dependencies -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.0</version>
+			<scope>test</scope>
 		</dependency>
 
-		<!-- These are the selenium-webdriver dependencies -->	
+		<!-- These are the selenium-webdriver dependencies -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.5.2</version>
+			<version>4.8.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
-			<version>3.5.2</version>
+			<version>3.141.59</version>
 		</dependency>
-		<dependency>
-		    <groupId>com.github.selenium-cucumber</groupId>
-		    <artifactId>selenium-cucumber-java</artifactId>
-		    <version>1.0.1-beta</version>
-		</dependency>
-		
-		<!-- These are the Appium dependencies -->	
-		<dependency>
-		    <groupId>io.appium</groupId>
-		    <artifactId>java-client</artifactId>
-		    <version>5.0.4</version>
-		</dependency>
+
 	</dependencies>
 	
 	<build>
@@ -70,20 +62,9 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<compilerArgument>-Werror</compilerArgument>
-
-					<systemPropertyVariables>
-						<property>
-							<name>browser</name>
-							<value>${browser}</value>
-						</property>
-						<property>
-							<name>cloud_config</name>
-							<value>${cloud_config}</value>
-						</property>
-					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

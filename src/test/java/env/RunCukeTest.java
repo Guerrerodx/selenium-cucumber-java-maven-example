@@ -2,8 +2,8 @@ package env;
 
 import org.junit.runner.RunWith;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -13,9 +13,7 @@ import cucumber.api.junit.Cucumber;
 			 "pretty:target/cucumber-json-report.json"   // for json result
 		     },
 		features = "classpath:features",
-		glue = {"info.seleniumcucumber.stepdefinitions",   // predefined step definitions package
-				"info.seleniumcucumber.userStepDefintions" // user step definitions package
-			   }
+		glue = {"info/seleniumcucumber/userStepDefintions"}
 )
 
 public class RunCukeTest { 	
